@@ -1,0 +1,31 @@
+{
+  "name": "ensofinance-ui-library",
+  "private": true,
+  "version": "1.0.0",
+  "description": "React TypeScript UI Component Library",
+  "scripts": {
+    "build": "pnpm --filter @ensofinance/ui build",
+    "dev": "pnpm --filter storybook dev",
+    "lint": "pnpm -r run lint",
+    "type-check": "pnpm -r run type-check",
+    "storybook": "pnpm --filter storybook dev",
+    "storybook:build": "pnpm --filter storybook build"
+  },
+  "keywords": [
+    "ui",
+    "components",
+    "react",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.4",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
+  }
+}
