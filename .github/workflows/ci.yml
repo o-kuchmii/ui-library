@@ -82,7 +82,10 @@ jobs:
       - name: Build
         run: pnpm --filter @ensofinance/ui build
 
-      - name: Publish
-        run: pnpm --filter @ensofinance/ui publish --access public
+      - name: Configure npm authentication
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Publish to NPM
+        run: cd packages/ui && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
