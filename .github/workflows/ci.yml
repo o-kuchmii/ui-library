@@ -52,6 +52,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build UI package
+        run: pnpm --filter @ensofinance/ui build
+
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
