@@ -6,6 +6,7 @@
   "scripts": {
     "build": "pnpm --filter @ensofinance/ui build",
     "dev": "pnpm --filter storybook dev",
+    "start": "pnpm build && pnpm dev",
     "lint": "pnpm -r run lint",
     "type-check": "pnpm -r run type-check",
     "storybook": "pnpm --filter storybook dev",
